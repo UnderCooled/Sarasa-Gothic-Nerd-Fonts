@@ -1,9 +1,6 @@
 name: generate fonts
 
-on:
-  push:
-    tags:
-      - 'v*.*.*'
+on: workflow_dispatch
 
 concurrency: generate-fonts
 
