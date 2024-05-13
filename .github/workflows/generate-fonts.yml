@@ -70,7 +70,7 @@ jobs:
           ]
     env:
       FILENAME: 'sarasa-${{ matrix.styles }}-${{ matrix.orthographies }}-${{ matrix.variants }}'
-      NERD_FONTS_VERSION: v3.1.1
+      NERD_FONTS_VERSION: v3.2.1
     steps:
       - uses: actions/checkout@v4
 
@@ -134,7 +134,7 @@ jobs:
       - run: ls -l
       - run: mkdir -p "${PWD}/outputs"
       - name: patch font
-        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --fontawesome --fontawesomeext --fontlogos --material --octicons --powersymbols --pomicons --powerline --powerlineextra --weather --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}/outputs"
+        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}/outputs"
       - run: ls -l
       - run: ls -l "${PWD}/outputs"
       - name: rename patched font files
@@ -189,7 +189,7 @@ jobs:
           ]
     env:
       FILENAME: 'sarasa-${{ matrix.styles }}-${{ matrix.orthographies }}-${{ matrix.variants }}'
-      NERD_FONTS_VERSION: v3.1.1
+      NERD_FONTS_VERSION: v3.2.1
     steps:
       - uses: actions/checkout@v4
 
@@ -253,7 +253,7 @@ jobs:
       - run: ls -l
       - run: mkdir -p "${PWD}/outputs"
       - name: patch font
-        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --fontawesome --fontawesomeext --fontlogos --material --octicons --powersymbols --pomicons --powerline --powerlineextra --weather --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}/outputs"
+        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}/outputs"
       - run: ls -l
       - run: ls -l "${PWD}/outputs"
       - name: rename patched font files
