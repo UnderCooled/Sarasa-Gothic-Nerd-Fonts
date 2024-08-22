@@ -14,7 +14,7 @@ jobs:
       - name: Get the latest version of Sarasa Gothic
         id: get-latest-version
         run: |
-          TAG='v1.0.15'
+          TAG='v1.0.19'
           echo "tag=${TAG}" >> $GITHUB_OUTPUT
           echo tag is ${TAG}
           VERSION=${TAG:1}
